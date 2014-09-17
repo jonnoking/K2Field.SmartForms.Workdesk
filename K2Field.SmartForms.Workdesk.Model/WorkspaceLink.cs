@@ -193,19 +193,19 @@ namespace K2Field.SmartForms.Workdesk.Model
             }
         }
 
-        private ObservableCollection<Workspace> workspaces;
-        public virtual ObservableCollection<Workspace> Workspaces
+        private Workspace workspace;
+        public virtual Workspace Workspace
         {
             get
             {
-                return workspaces;
+                return workspace;
             }
             set
             {
-                if (workspaces != value)
+                if (workspace != value)
                 {
-                    workspaces = value;
-                    NotifyPropertyChanged("Workspaces");
+                    workspace = value;
+                    NotifyPropertyChanged("Workspace");
                 }
             }
         }

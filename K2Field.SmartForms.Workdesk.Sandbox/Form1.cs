@@ -3,13 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Model.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections.ObjectModel;
+using System.Data.Entity;
 
 namespace K2Field.SmartForms.Workdesk.Sandbox
 {
@@ -23,7 +23,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
         private void btnInit_Click(object sender, EventArgs e)
         {
             // will reset database
-            Database.SetInitializer(new DropCreateDatabaseAlways<K2Field.SmartForms.Workdesk.Model.WorkdeskContext>());
+            Database.SetInitializer(new DropCreateDatabaseAlways<K2Field.SmartForms.Workdesk.Data.WorkdeskContext>());
 
             CreateK2UKApp();
 
@@ -54,6 +54,11 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                     IsADGroup = true,
                     FQN = @"denallix\administrators"
                 };
+
+                ObservableCollection<Model.WorkspaceTeam> Teams = new ObservableCollection<Model.WorkspaceTeam>();
+                Teams.Add(scna);
+                Teams.Add(scuk);
+
 
                 Model.WorkspaceLink link1a = new Model.WorkspaceLink()
                 {
@@ -281,7 +286,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                     Type = "Link",
                     Icon = "fa fa-pie-chart fa-fw",
                     MinHeight = 500,
-                    Sequence = 33s,
+                    Sequence = 33,
                 };
 
                 //ObservableCollection<Model.WorkspaceLink> dash = new ObservableCollection<Model.WorkspaceLink>();
@@ -295,6 +300,10 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                 headings.Add(link1);
                 headings.Add(link2);
                 headings.Add(link3);
+
+                headings.Add(link1a);
+                headings.Add(link1b);
+                headings.Add(link1c);
 
                 headings.Add(taskalloc);
                 headings.Add(sendmessage);
@@ -321,84 +330,213 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                     SmartFormsRuntimeUrl = "https://k2.denallix.com/runtime/",
                     Links = headings,
                     Icon = "fa fa-suitcase fa-5x",
+                    WorkspaceTeams = Teams,
                 };
 
+                unit.Workspaces.Add(w);
 
 
 
-                ObservableCollection<Model.WorkspaceLink> headings1 = new ObservableCollection<Model.WorkspaceLink>();
-                headings1.Add(link1a);
-                headings1.Add(link1b);
-                headings1.Add(link1c);
-                headings1.Add(chart1);
-                headings1.Add(chart2);
 
-                Model.Workspace w1 = new Model.Workspace()
+
+
+                // WORKSPACE 2
+
+                Model.WorkspaceTeam TASKscna = new Model.WorkspaceTeam()
                 {
-                    DisplayName = "Task Management",
-                    Name = "taskmanagement",
-                    Description = "Task Management workdesk description...",
-                    SmartFormsRuntimeUrl = "https://k2.denallix.com/runtime/",
-                    Links = headings1,
-                    Icon = "fa fa-share-alt fa-2x",
+                    Name = "scna",
+                    DisplayName = "K2 SCNA",
+                    Description = "K2 North American Team",
+                    IsActive = true,
+                    IsADGroup = true,
+                    FQN = @"denallix\domain users"
                 };
 
-
-                Model.WorkspaceLink linkservice = new Model.WorkspaceLink()
+                Model.WorkspaceTeam TASKscuk = new Model.WorkspaceTeam()
                 {
-                    Name = "serviceapps",
-                    DisplayName = "Service Apps",
+                    Name = "scuk",
+                    DisplayName = "K2 SCUK",
+                    Description = "K2 UK Europe Team",
+                    IsActive = true,
+                    IsADGroup = true,
+                    FQN = @"denallix\administrators"
+                };
+
+                ObservableCollection<Model.WorkspaceTeam> TASKTeams = new ObservableCollection<Model.WorkspaceTeam>();
+                Teams.Add(TASKscna);
+                Teams.Add(TASKscuk);
+
+
+                Model.WorkspaceLink TASKlink1a = new Model.WorkspaceLink()
+                {
+                    Name = "mytasks",
+                    DisplayName = "My Tasks",
+                    IsEnabled = true,
+                    IsSmartForm = true,
+                    Level = 1,
+                    Url = "https://k2.denallix.com/Runtime/Runtime/Form/Worklist/",
+                    Type = "Link",
+                    Icon = "fa fa-male fa-fw",
+                    MinHeight = 400,
+                    Sequence = 11,
+                };
+
+                Model.WorkspaceLink TASKlink1b = new Model.WorkspaceLink()
+                {
+                    Name = "teamtasks",
+                    DisplayName = "Team Tasks",
+                    IsEnabled = true,
+                    IsSmartForm = true,
+                    Level = 1,
+                    Url = "https://k2.denallix.com/Runtime/Runtime/Form/Worklist/",
+                    Type = "Link",
+                    Icon = "fa fa-group fa-fw",
+                    MinHeight = 400,
+                    Sequence = 12,
+                };
+
+                Model.WorkspaceLink TASKlink1c = new Model.WorkspaceLink()
+                {
+                    Name = "servicetasks",
+                    DisplayName = "Service Tasks",
+                    IsEnabled = true,
+                    IsSmartForm = true,
+                    Level = 1,
+                    Url = "https://k2.denallix.com/Runtime/Runtime/Form/Worklist/",
+                    Type = "Link",
+                    Icon = "fa fa-sort-amount-asc fa-fw",
+                    MinHeight = 400,
+                    Sequence = 13,
+                };
+
+                Model.WorkspaceLink TASKlink1 = new Model.WorkspaceLink()
+                {
+                    Name = "tasks",
+                    DisplayName = "Tasks",
                     IsEnabled = true,
                     IsSmartForm = false,
                     Level = 0,
-                    //Url = "https://k2.denallix.com/Runtime/Runtime/View/Demo+CRM+Account+List/",
                     Type = "Heading",
-                    Icon = "fa fa-cogs fa-fw",
-                    MinHeight = 500
+                    Icon = "fa fa-tasks fa-fw",
+                    Sequence = 10
                 };
 
-                ObservableCollection<Model.WorkspaceLink> serviceapps = new ObservableCollection<Model.WorkspaceLink>();
-                serviceapps.Add(customerfeedback);
-                serviceapps.Add(sendmessage);
-                serviceapps.Add(logaconversation);
-                serviceapps.Add(taskalloc);
 
-                linkservice.ChildLinks = serviceapps;
+
+
 
                 ObservableCollection<Model.WorkspaceLink> headings2 = new ObservableCollection<Model.WorkspaceLink>();
-                headings2.Add(link1a);
-                headings2.Add(link1b);
-                headings2.Add(linkservice);
-                headings2.Add(chart1);
-                headings2.Add(chart3);
+                headings2.Add(TASKlink1);
+                //headings2.Add(link2);
+                //headings2.Add(link3);
+
+                headings2.Add(TASKlink1a);
+                headings2.Add(TASKlink1b);
+                headings2.Add(TASKlink1c);
+
+                //headings2.Add(taskalloc);
+                //headings2.Add(sendmessage);
+                //headings2.Add(customerfeedback);
+                //headings2.Add(logaconversation);
+                //headings.Add(employeeonboarding);
+                //headings.Add(raiseapurchaseorder);
+
+                //headings2.Add(chart1);
+                //headings.Add(chart2);
+                //headings.Add(chart3);
 
 
-                Model.Workspace w2 = new Model.Workspace()
+
+
+                Model.Workspace w1 = new Model.Workspace()
                 {
-                    DisplayName = "Service Desks",
-                    Name = "servicedesk",
-                    Description = "Customer Service Desk description...",
+                    DisplayName = "K2 Task Management",
+                    Name = "k2taskmanagement",
+                    Description = "K2 Task Management description....",
                     SmartFormsRuntimeUrl = "https://k2.denallix.com/runtime/",
                     Links = headings2,
-                    Icon = "fa fa-trophy fa-2x",
+                    Icon = "fa fa-cubes fa-5x",
+                    WorkspaceTeams = TASKTeams,
                 };
 
-                w.WorkspaceTeams = new ObservableCollection<Model.WorkspaceTeam>();
-                w.WorkspaceTeams.Add(scna);
-                w.WorkspaceTeams.Add(scuk);
-
-                w1.WorkspaceTeams = new ObservableCollection<Model.WorkspaceTeam>();
-                w1.WorkspaceTeams.Add(scna);
-                w1.WorkspaceTeams.Add(scuk);
-
-                w2.WorkspaceTeams = new ObservableCollection<Model.WorkspaceTeam>();
-                w2.WorkspaceTeams.Add(scna);
-                w2.WorkspaceTeams.Add(scuk);
-
-                //unit.WorkspaceTeams.Add(t);
-                unit.Workspaces.Add(w);
+                
+                
                 unit.Workspaces.Add(w1);
-                unit.Workspaces.Add(w2);
+
+
+                //ObservableCollection<Model.WorkspaceLink> headings1 = new ObservableCollection<Model.WorkspaceLink>();
+                //headings1.Add(link1a);
+                //headings1.Add(link1b);
+                //headings1.Add(link1c);
+                //headings1.Add(chart1);
+                //headings1.Add(chart2);
+
+                //Model.Workspace w1 = new Model.Workspace()
+                //{
+                //    DisplayName = "Task Management",
+                //    Name = "taskmanagement",
+                //    Description = "Task Management workdesk description...",
+                //    SmartFormsRuntimeUrl = "https://k2.denallix.com/runtime/",
+                //    Links = headings1,
+                //    Icon = "fa fa-share-alt fa-2x",
+                //};
+
+
+                //Model.WorkspaceLink linkservice = new Model.WorkspaceLink()
+                //{
+                //    Name = "serviceapps",
+                //    DisplayName = "Service Apps",
+                //    IsEnabled = true,
+                //    IsSmartForm = false,
+                //    Level = 0,
+                //    //Url = "https://k2.denallix.com/Runtime/Runtime/View/Demo+CRM+Account+List/",
+                //    Type = "Heading",
+                //    Icon = "fa fa-cogs fa-fw",
+                //    MinHeight = 500
+                //};
+
+                //ObservableCollection<Model.WorkspaceLink> serviceapps = new ObservableCollection<Model.WorkspaceLink>();
+                //serviceapps.Add(customerfeedback);
+                //serviceapps.Add(sendmessage);
+                //serviceapps.Add(logaconversation);
+                //serviceapps.Add(taskalloc);
+
+                //linkservice.ChildLinks = serviceapps;
+
+                //ObservableCollection<Model.WorkspaceLink> headings2 = new ObservableCollection<Model.WorkspaceLink>();
+                //headings2.Add(link1a);
+                //headings2.Add(link1b);
+                //headings2.Add(linkservice);
+                //headings2.Add(chart1);
+                //headings2.Add(chart3);
+
+
+                //Model.Workspace w2 = new Model.Workspace()
+                //{
+                //    DisplayName = "Service Desks",
+                //    Name = "servicedesk",
+                //    Description = "Customer Service Desk description...",
+                //    SmartFormsRuntimeUrl = "https://k2.denallix.com/runtime/",
+                //    Links = headings2,
+                //    Icon = "fa fa-trophy fa-2x",
+                //};
+
+                //w.WorkspaceTeams = new ObservableCollection<Model.WorkspaceTeam>();
+                //w.WorkspaceTeams.Add(scna);
+                //w.WorkspaceTeams.Add(scuk);
+
+                //w1.WorkspaceTeams = new ObservableCollection<Model.WorkspaceTeam>();
+                //w1.WorkspaceTeams.Add(scna);
+                //w1.WorkspaceTeams.Add(scuk);
+
+                //w2.WorkspaceTeams = new ObservableCollection<Model.WorkspaceTeam>();
+                //w2.WorkspaceTeams.Add(scna);
+                //w2.WorkspaceTeams.Add(scuk);
+
+                ////unit.WorkspaceTeams.Add(t);
+                //unit.Workspaces.Add(w);
+                //unit.Workspaces.Add(w1);
+                //unit.Workspaces.Add(w2);
 
                 int rows = unit.SaveChanges();
                 MessageBox.Show("Rows: " + rows);

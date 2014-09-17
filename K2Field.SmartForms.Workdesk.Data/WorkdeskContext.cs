@@ -12,7 +12,7 @@ namespace K2Field.SmartForms.Workdesk.Data
     public class WorkdeskContext : DbContext
     {
         public WorkdeskContext()
-            : base("WorkspaceContext")
+            : base("WorkdeskContext")
         {
         }
 
