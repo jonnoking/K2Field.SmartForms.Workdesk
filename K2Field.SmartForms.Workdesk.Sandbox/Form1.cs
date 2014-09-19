@@ -67,7 +67,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                     IsEnabled = true,
                     IsSmartForm = true,
                     Level = 1,
-                    Url = "https://k2.denallix.com/Runtime/Runtime/Form/Worklist/",
+                    Url = "https://k2.denallix.com/Runtime/Runtime/Form/K2+Worklist+View/",
                     Type = "Link",
                     Icon = "fa fa-male fa-fw",
                     MinHeight = 400,
@@ -81,7 +81,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                     IsEnabled = true,
                     IsSmartForm = true,
                     Level = 1,
-                    Url = "https://k2.denallix.com/Runtime/Runtime/Form/Worklist/",
+                    Url = "https://k2.denallix.com/Runtime/Runtime/Form/K2+Worklist+View/",
                     Type = "Link",
                     Icon = "fa fa-group fa-fw",
                     MinHeight = 400,
@@ -95,7 +95,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                     IsEnabled = true,
                     IsSmartForm = true,
                     Level = 1,
-                    Url = "https://k2.denallix.com/Runtime/Runtime/Form/Worklist/",
+                    Url = "https://k2.denallix.com/Runtime/Runtime/Form/K2+Worklist+View/",
                     Type = "Link",
                     Icon = "fa fa-sort-amount-asc fa-fw",
                     MinHeight = 400,
@@ -110,7 +110,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                     IsSmartForm = false,
                     Level = 0,
                     Type = "Heading",
-                    Icon = "fa fa-tasks fa-fw",
+                    Icon = "fa fa-tasks fa-2x",
                     Sequence = 10
                 };
 
@@ -122,9 +122,9 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                     IsEnabled = true,
                     IsSmartForm = false,
                     Level = 0,
-                    //Url = "https://k2.denallix.com/Runtime/Runtime/View/Demo+CRM+Account+List/",
+                    //Url = "https://k2.denallix.com/Runtime/Runtime/Form/Demo+CRM+Account+Browser/",
                     Type = "Heading",
-                    Icon = "fa fa-cogs fa-fw",
+                    Icon = "fa fa-cogs fa-2x",
                     MinHeight = 500,
                     Sequence = 20
                 };
@@ -137,7 +137,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                     IsEnabled = true,
                     IsSmartForm = true,
                     Level = 1,
-                    Url = "https://k2.denallix.com/runtime/runtime/form/cm.task__create.form/?_theme=jove1",
+                    Url = "https://k2.denallix.com/Runtime/Runtime/Form/Demo+CRM+Account+Browser/",
                     Type = "Link",
                     Icon = "fa fa-sitemap fa-fw",
                     MinHeight = 500,
@@ -237,7 +237,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                     IsSmartForm = false,
                     Level = 0,
                     Type = "Heading",
-                    Icon = "fa fa-dashboard fa-fw",
+                    Icon = "fa fa-dashboard fa-2x",
                     MinHeight = 500,
                     Sequence = 30,
                 };
@@ -316,7 +316,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                 headings.Add(chart2);
                 headings.Add(chart3);
 
-                //Url = "https://k2.denallix.com/Runtime/Runtime/View/Demo+CRM+Account+List/",
+                //Url = "https://k2.denallix.com/Runtime/Runtime/Form/Demo+CRM+Account+Browser/",
 
 
                 //unit.WorklistUsers.Add(u);
@@ -374,7 +374,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                     IsEnabled = true,
                     IsSmartForm = true,
                     Level = 1,
-                    Url = "https://k2.denallix.com/Runtime/Runtime/Form/Worklist/",
+                    Url = "https://k2.denallix.com/Runtime/Runtime/Form/K2+Worklist+View/",
                     Type = "Link",
                     Icon = "fa fa-male fa-fw",
                     MinHeight = 400,
@@ -388,7 +388,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                     IsEnabled = true,
                     IsSmartForm = true,
                     Level = 1,
-                    Url = "https://k2.denallix.com/Runtime/Runtime/Form/Worklist/",
+                    Url = "https://k2.denallix.com/Runtime/Runtime/Form/K2+Worklist+View/",
                     Type = "Link",
                     Icon = "fa fa-group fa-fw",
                     MinHeight = 400,
@@ -402,7 +402,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                     IsEnabled = true,
                     IsSmartForm = true,
                     Level = 1,
-                    Url = "https://k2.denallix.com/Runtime/Runtime/Form/Worklist/",
+                    Url = "https://k2.denallix.com/Runtime/Runtime/Form/K2+Worklist+View/",
                     Type = "Link",
                     Icon = "fa fa-sort-amount-asc fa-fw",
                     MinHeight = 400,
@@ -417,7 +417,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                     IsSmartForm = false,
                     Level = 0,
                     Type = "Heading",
-                    Icon = "fa fa-tasks fa-fw",
+                    Icon = "fa fa-tasks fa-2x",
                     Sequence = 10
                 };
 
@@ -489,7 +489,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                 //    IsEnabled = true,
                 //    IsSmartForm = false,
                 //    Level = 0,
-                //    //Url = "https://k2.denallix.com/Runtime/Runtime/View/Demo+CRM+Account+List/",
+                //    //Url = "https://k2.denallix.com/Runtime/Runtime/Form/Demo+CRM+Account+Browser/",
                 //    Type = "Heading",
                 //    Icon = "fa fa-cogs fa-fw",
                 //    MinHeight = 500
