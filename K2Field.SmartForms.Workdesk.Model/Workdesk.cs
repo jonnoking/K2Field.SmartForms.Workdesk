@@ -6,7 +6,7 @@ using System.Text;
 
 namespace K2Field.SmartForms.Workdesk.Model
 {
-    public class Workspace : INotify
+    public class Workdesk : INotify
     {
         private Guid id;
         public Guid Id
@@ -109,8 +109,8 @@ namespace K2Field.SmartForms.Workdesk.Model
         }
 
 
-        private ObservableCollection<WorkspaceLink> links;
-        public virtual ObservableCollection<WorkspaceLink> Links
+        private ObservableCollection<WorkdeskLink> links;
+        public virtual ObservableCollection<WorkdeskLink> Links
         {
             get
             {
@@ -126,8 +126,8 @@ namespace K2Field.SmartForms.Workdesk.Model
             }
         }
 
-        private ObservableCollection<WorkspaceTeam> workspaceteams;
-        public virtual ObservableCollection<WorkspaceTeam> WorkspaceTeams
+        private ObservableCollection<WorkdeskTeam> workspaceteams;
+        public virtual ObservableCollection<WorkdeskTeam> WorkspaceTeams
         {
             get
             {

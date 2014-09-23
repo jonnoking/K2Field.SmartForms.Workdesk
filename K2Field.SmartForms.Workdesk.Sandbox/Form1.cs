@@ -35,7 +35,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
 
             using (var unit = new ApplicationUnit())
             {
-                Model.WorkspaceTeam scna = new Model.WorkspaceTeam()
+                Model.WorkdeskTeam scna = new Model.WorkdeskTeam()
                 {
                     Name = "scna",
                     DisplayName = "K2 SCNA",
@@ -45,7 +45,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                     FQN = @"denallix\domain users"
                 };
 
-                Model.WorkspaceTeam scuk = new Model.WorkspaceTeam()
+                Model.WorkdeskTeam scuk = new Model.WorkdeskTeam()
                 {
                     Name = "scuk",
                     DisplayName = "K2 SCUK",
@@ -55,12 +55,12 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                     FQN = @"denallix\administrators"
                 };
 
-                ObservableCollection<Model.WorkspaceTeam> Teams = new ObservableCollection<Model.WorkspaceTeam>();
+                ObservableCollection<Model.WorkdeskTeam> Teams = new ObservableCollection<Model.WorkdeskTeam>();
                 Teams.Add(scna);
                 Teams.Add(scuk);
 
 
-                Model.WorkspaceLink link1a = new Model.WorkspaceLink()
+                Model.WorkdeskLink link1a = new Model.WorkdeskLink()
                 {
                     Name = "mytasks",
                     DisplayName = "My Tasks",
@@ -74,7 +74,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                     Sequence = 11,
                 };
 
-                Model.WorkspaceLink link1b = new Model.WorkspaceLink()
+                Model.WorkdeskLink link1b = new Model.WorkdeskLink()
                 {
                     Name = "teamtasks",
                     DisplayName = "Team Tasks",
@@ -88,7 +88,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                     Sequence = 12,
                 };
 
-                Model.WorkspaceLink link1c = new Model.WorkspaceLink()
+                Model.WorkdeskLink link1c = new Model.WorkdeskLink()
                 {
                     Name = "servicetasks",
                     DisplayName = "Service Tasks",
@@ -102,7 +102,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                     Sequence = 13,
                 };
 
-                Model.WorkspaceLink link1 = new Model.WorkspaceLink()
+                Model.WorkdeskLink link1 = new Model.WorkdeskLink()
                 {
                     Name = "tasks",
                     DisplayName = "Tasks",
@@ -115,7 +115,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                 };
 
 
-                Model.WorkspaceLink link2 = new Model.WorkspaceLink()
+                Model.WorkdeskLink link2 = new Model.WorkdeskLink()
                 {
                     Name = "apps",
                     DisplayName = "Apps",
@@ -129,7 +129,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                     Sequence = 20
                 };
 
-                Model.WorkspaceLink taskalloc = new Model.WorkspaceLink()
+                Model.WorkdeskLink taskalloc = new Model.WorkdeskLink()
                 {
                     Name = "taskallocation",
                     DisplayName = "Task Allocation",
@@ -144,7 +144,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                     Sequence = 21,
                 };
 
-                Model.WorkspaceLink sendmessage = new Model.WorkspaceLink()
+                Model.WorkdeskLink sendmessage = new Model.WorkdeskLink()
                 {
                     Name = "sendmessage",
                     DisplayName = "Send Message",
@@ -159,7 +159,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                     Sequence = 22,
                 };
 
-                Model.WorkspaceLink customerfeedback = new Model.WorkspaceLink()
+                Model.WorkdeskLink customerfeedback = new Model.WorkdeskLink()
                 {
                     Name = "customerfeedback",
                     DisplayName = "Customer Feedback",
@@ -174,7 +174,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                     Sequence = 23,
                 };
 
-                Model.WorkspaceLink logaconversation = new Model.WorkspaceLink()
+                Model.WorkdeskLink logaconversation = new Model.WorkdeskLink()
                 {
                     Name = "logaconversation",
                     DisplayName = "Log a Conversation",
@@ -189,7 +189,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                     Sequence = 24,
                 };
 
-                Model.WorkspaceLink employeeonboarding = new Model.WorkspaceLink()
+                Model.WorkdeskLink employeeonboarding = new Model.WorkdeskLink()
                 {
                     Name = "employeeonboarding",
                     DisplayName = "Employee Onboarding",
@@ -204,7 +204,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                     Sequence = 25,
                 };
 
-                Model.WorkspaceLink raiseapurchaseorder = new Model.WorkspaceLink()
+                Model.WorkdeskLink raiseapurchaseorder = new Model.WorkdeskLink()
                 {
                     Name = "raiseapurchaseorder",
                     DisplayName = "Raise Purchase Order",
@@ -229,7 +229,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
 
                 
 
-                Model.WorkspaceLink link3 = new Model.WorkspaceLink()
+                Model.WorkdeskLink link3 = new Model.WorkdeskLink()
                 {
                     Name = "dashboards",
                     DisplayName = "Dashboards",
@@ -243,7 +243,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                 };
 
 
-                Model.WorkspaceLink chart1 = new Model.WorkspaceLink()
+                Model.WorkdeskLink chart1 = new Model.WorkdeskLink()
                 {
                     Name = "chart1",
                     DisplayName = "Org KPI ",
@@ -259,7 +259,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                 };
 
 
-                Model.WorkspaceLink chart2 = new Model.WorkspaceLink()
+                Model.WorkdeskLink chart2 = new Model.WorkdeskLink()
                 {
                     Name = "chart2",
                     DisplayName = "Task Dashboard ",
@@ -274,7 +274,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                     Sequence = 32,
                 };
 
-                Model.WorkspaceLink chart3 = new Model.WorkspaceLink()
+                Model.WorkdeskLink chart3 = new Model.WorkdeskLink()
                 {
                     Name = "chart3",
                     DisplayName = "Customer Service Dashboard ",
@@ -296,7 +296,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
 
                 ///link3.ChildLinks = dash;
 
-                ObservableCollection<Model.WorkspaceLink> headings = new ObservableCollection<Model.WorkspaceLink>();
+                ObservableCollection<Model.WorkdeskLink> headings = new ObservableCollection<Model.WorkdeskLink>();
                 headings.Add(link1);
                 headings.Add(link2);
                 headings.Add(link3);
@@ -322,7 +322,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                 //unit.WorklistUsers.Add(u);
 
 
-                Model.Workspace w = new Model.Workspace()
+                Model.Workdesk w = new Model.Workdesk()
                 {
                     DisplayName = "K2 Workdesk",
                     Name = "K2workdesk",
@@ -342,7 +342,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
 
                 // WORKSPACE 2
 
-                Model.WorkspaceTeam TASKscna = new Model.WorkspaceTeam()
+                Model.WorkdeskTeam TASKscna = new Model.WorkdeskTeam()
                 {
                     Name = "scna",
                     DisplayName = "K2 SCNA",
@@ -352,7 +352,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                     FQN = @"denallix\domain users"
                 };
 
-                Model.WorkspaceTeam TASKscuk = new Model.WorkspaceTeam()
+                Model.WorkdeskTeam TASKscuk = new Model.WorkdeskTeam()
                 {
                     Name = "scuk",
                     DisplayName = "K2 SCUK",
@@ -362,12 +362,12 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                     FQN = @"denallix\administrators"
                 };
 
-                ObservableCollection<Model.WorkspaceTeam> TASKTeams = new ObservableCollection<Model.WorkspaceTeam>();
+                ObservableCollection<Model.WorkdeskTeam> TASKTeams = new ObservableCollection<Model.WorkdeskTeam>();
                 Teams.Add(TASKscna);
                 Teams.Add(TASKscuk);
 
 
-                Model.WorkspaceLink TASKlink1a = new Model.WorkspaceLink()
+                Model.WorkdeskLink TASKlink1a = new Model.WorkdeskLink()
                 {
                     Name = "mytasks",
                     DisplayName = "My Tasks",
@@ -381,7 +381,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                     Sequence = 11,
                 };
 
-                Model.WorkspaceLink TASKlink1b = new Model.WorkspaceLink()
+                Model.WorkdeskLink TASKlink1b = new Model.WorkdeskLink()
                 {
                     Name = "teamtasks",
                     DisplayName = "Team Tasks",
@@ -395,7 +395,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                     Sequence = 12,
                 };
 
-                Model.WorkspaceLink TASKlink1c = new Model.WorkspaceLink()
+                Model.WorkdeskLink TASKlink1c = new Model.WorkdeskLink()
                 {
                     Name = "servicetasks",
                     DisplayName = "Service Tasks",
@@ -409,7 +409,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                     Sequence = 13,
                 };
 
-                Model.WorkspaceLink TASKlink1 = new Model.WorkspaceLink()
+                Model.WorkdeskLink TASKlink1 = new Model.WorkdeskLink()
                 {
                     Name = "tasks",
                     DisplayName = "Tasks",
@@ -425,7 +425,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
 
 
 
-                ObservableCollection<Model.WorkspaceLink> headings2 = new ObservableCollection<Model.WorkspaceLink>();
+                ObservableCollection<Model.WorkdeskLink> headings2 = new ObservableCollection<Model.WorkdeskLink>();
                 headings2.Add(TASKlink1);
                 //headings2.Add(link2);
                 //headings2.Add(link3);
@@ -448,7 +448,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
 
 
 
-                Model.Workspace w1 = new Model.Workspace()
+                Model.Workdesk w1 = new Model.Workdesk()
                 {
                     DisplayName = "K2 Task Management",
                     Name = "k2taskmanagement",

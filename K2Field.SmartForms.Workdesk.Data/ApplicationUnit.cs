@@ -10,42 +10,42 @@ namespace K2Field.SmartForms.Workdesk.Data
     {
         private WorkdeskContext _context = new WorkdeskContext();
 
-        private IRepository<Model.Workspace> _workspace = null;
-        private IRepository<Model.WorkspaceLink> _workspacelink = null;
-        private IRepository<Model.WorkspaceTeam> _workspaceteam = null;
+        private IRepository<Model.Workdesk> _workspace = null;
+        private IRepository<Model.WorkdeskLink> _workspacelink = null;
+        private IRepository<Model.WorkdeskTeam> _workspaceteam = null;
 
 
-        public IRepository<Model.Workspace> Workspaces
+        public IRepository<Model.Workdesk> Workspaces
         {
             get
             {
                 if (this._workspace == null)
                 {
-                    this._workspace = new GenericRepository<Model.Workspace>(this._context);
+                    this._workspace = new GenericRepository<Model.Workdesk>(this._context);
                 }
                 return this._workspace;
             }
         }
 
-        public IRepository<Model.WorkspaceLink> WorkspaceLinks
+        public IRepository<Model.WorkdeskLink> WorkspaceLinks
         {
             get
             {
                 if (this._workspacelink == null)
                 {
-                    this._workspacelink = new GenericRepository<Model.WorkspaceLink>(this._context);
+                    this._workspacelink = new GenericRepository<Model.WorkdeskLink>(this._context);
                 }
                 return this._workspacelink;
             }
         }
 
-        public IRepository<Model.WorkspaceTeam> WorkspaceTeams
+        public IRepository<Model.WorkdeskTeam> WorkspaceTeams
         {
             get
             {
                 if (this._workspaceteam == null)
                 {
-                    this._workspaceteam = new GenericRepository<Model.WorkspaceTeam>(this._context);
+                    this._workspaceteam = new GenericRepository<Model.WorkdeskTeam>(this._context);
                 }
                 return this._workspaceteam;
             }

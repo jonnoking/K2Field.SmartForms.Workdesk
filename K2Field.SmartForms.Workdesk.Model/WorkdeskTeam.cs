@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace K2Field.SmartForms.Workdesk.Model
 {
-    public class WorkspaceTeam : INotify
+    public class WorkdeskTeam : INotify
     {
         private Guid id;
         public Guid Id
@@ -114,8 +114,8 @@ namespace K2Field.SmartForms.Workdesk.Model
             }
         }
 
-        private Workspace workspace;
-        public virtual Workspace Workspace
+        private Workdesk workspace;
+        public virtual Workdesk Workspace
         {
             get
             {
