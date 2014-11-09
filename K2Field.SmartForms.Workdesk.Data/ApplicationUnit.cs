@@ -51,6 +51,18 @@ namespace K2Field.SmartForms.Workdesk.Data
             }
         }
 
+        public int SetK2ServicePermission(string username)
+        {
+            if (!string.IsNullOrWhiteSpace(username))
+            {
+                return _context.Database.ExecuteSqlCommand(string.Format(@"exec sp_addrolemember 'db_owner', '{0}'", username));
+            }
+            else
+            {
+                return -1;
+            }
+        }
+
         public int SaveChanges()
         {
             return this._context.SaveChanges();
