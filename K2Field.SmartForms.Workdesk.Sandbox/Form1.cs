@@ -179,7 +179,10 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                     int rows = unit.SaveChanges();
                 
                     unit.SetK2ServicePermission(txtDatabaseOwner.Text);
-                    MessageBox.Show("Rows: " + rows);
+                    txtTasksWorkdeskId.Text = TasksWorkdesk.Id.ToString();
+                    txtManagementWorkdeskId.Text = ManagementWorkdesk.Id.ToString();
+
+                    //MessageBox.Show("Rows: " + rows);
 
                 }
                 catch(Exception ex)
