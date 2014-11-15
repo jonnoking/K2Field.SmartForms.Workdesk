@@ -49,7 +49,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                 Model.WorkdeskLink TasksMyWorklistLink = new Model.WorkdeskLink()
                 {
                     Name = "myworklist",
-                    DisplayName = "My Wokrklist",
+                    DisplayName = "My Worklist",
                     IsEnabled = true,
                     IsSmartForm = true,
                     Level = 1,
@@ -63,7 +63,7 @@ namespace K2Field.SmartForms.Workdesk.Sandbox
                 Model.WorkdeskLink TasksTeamWorklistLink = new Model.WorkdeskLink()
                 {
                     Name = "teamworklist",
-                    DisplayName = "Team Wokrklist",
+                    DisplayName = "Team Workklist",
                     IsEnabled = true,
                     IsSmartForm = true,
                     Level = 1,
